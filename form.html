@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExMOD2 </title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        main{
+            
+            background-image: url(img/main_form.jpg);
+            background-repeat: repeat;
+            justify-content: center;
+            width: 70%;
+            padding: 5%;
+            margin: 5%;
+            flex-wrap: wrap;
+        }
+        main form{
+            width: 70%;
+            padding: 5%;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        main form h1{
+            text-align: center;
+            margin: 2%;
+            margin-top: 5%;
+            color: #3C7A89;
+        }
+        main form fieldset{
+            border: none;
+            border-radius: 10px;
+
+            background-color: rgba(255, 255, 255, 0.7);
+            
+            padding: 5%;
+
+        }
+        main form fieldset textarea{
+            width: 90%;
+            height: 100px;
+            resize: none;
+        }
+        main form fieldset label,textarea{
+            display: inline-block;
+            width: 30%;
+            margin: 2%;
+        }
+        main form span label{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="form.html">FORM</a>
+                <ul>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">ABOUTUS</a></li>
+                </ul>
+            </li>
+            <li><a href="learn.html">LEARN</a>
+                <ul>
+                    <li><a href="#">GUIDES</a></li>
+                    <li><a href="#">RESOURCES</a></li>
+                    <li><a href="#">COURSES</a></li>
+                </ul>
+            </li>
+            <li><a href="prova.html">TEST</a>
+                <ul>
+                    <li><a href="#">CONTEST</a></li>
+                    <li><a href="#">CHALLENGES</a></li>
+                </ul></li>
+        </ul>
+        <h1><a href="index.html">JAVASCRIPT</a></h1>
+    </nav>
+    
+    <header>
+        <figure><img src="img/header.jpg" alt=""></figure>
+    </header>
+
+    <main>
+        <form>
+
+            <h1>Datos personales</h1>
+            <fieldset>
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" minlength="3" maxlength="16" required placeholder="Inserte el nombre"><br>
+
+                <label for="surname">Apellido:</label>
+                <input type="text" name="surname" minlength="3" maxlength="16" required placeholder="Inserte el apellido"><br>
+
+
+                <label for="dni">DNI:</label>
+                <input type="text" name="dni" pattern="[0-9]{8}[A-Z]" minlength="9" maxlength="9" required placeholder="Inserte su  dni">
+                <br>
+                
+                
+                <label for="birth">Fecha de nacimiento:</label><br>
+                <input type="number" name="day" placeholder="day" id="day" required pattern="(0[1-9]|[12][0-9]|3[01])" minlength="2" maxlength="2">
+                <input type="number" name="month" placeholder="month" id="month" required pattern="0[1-9]|1[0-2]" minlength="2" maxlength="2">
+                <input type="number" name="year" placeholder="year" id="year" required pattern="(19[0-9]{2}|200[0-9]|201[0-4])" minlength="4" maxlength="4">
+                <br>
+
+
+                <span>
+                <input type="radio" name="sex">
+                <label>Male</label>
+                <input type="radio" name="sex">
+                <label>Female</label>
+                <input type="radio" name="sex" checked>
+                <label>NonBinary</label></span>
+            </fieldset>
+
+            <h1>Datos de Contacto</h1>
+            <fieldset>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="coloque su email"><br>
+
+                <label for="telf">Teléfono</label>
+                <input type="number" required minlength="9" maxlength="9">
+            </fieldset>
+            
+            <h1>Motivo de la consulta</h1>
+
+            <fieldset>
+
+                <input type="checkbox" name="terminos">
+                <label for="terminos">Acepto los términos</label>
+
+                <label for="colour">Color Favorito</label>
+                <input type="color" name="color" id="color">
+                <br>
+
+                <textarea name="motivo de la consulta"  minlength="10" placeholder="Coloque el motivo de su consulta...."></textarea>
+                <br>
+
+                <button type="submit">Registrarse</button>
+                <button type="reset">Clear</button>
+            </fieldset>
+
+        </form>
+    </main>
+    <footer><figure>
+        <a href="https://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="Facebook logo" title="Facebook logo"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="img/instagram.png" alt="Instagram logo" title="Instagram logo"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="img/linkedin.png" alt="LinkedIn logo" title="LinkedIn logo"></a>
+        <a href="https://twitter.com/?lang=es" target="_blank"><img src="img/twitter.png" alt="Twiiter logo" title="Twiiter logo"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="img/youtube.png" alt="Youtube Logo" title="Youtube Logo"></a>
+    </figure></footer>
+</body>
+</html>

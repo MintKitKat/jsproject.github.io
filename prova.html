@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExMOD2 </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        main{
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            margin: auto;
+            margin: 5%;
+            padding: 5%;
+            background-image: url(img/main_form.jpg);
+            background-repeat: repeat;
+            justify-content: center;
+
+        }
+        section{
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5%;
+            margin: 5%;
+            width: 80%;
+        }
+        section label{
+            display: inline-block;
+            width: 50%;
+            margin: 2%;
+        }
+        section button{
+            background-color: #F1C40F;
+            width: 30%;
+            height: 50px;
+            margin: 2%;
+            border: none;
+            font-weight: bold;
+        }
+        section button:hover{
+            background-color: #dc18ff;
+            color: #F1C40F;
+        }
+        output{
+            font-weight: bold;
+            margin: 5%;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="form.html">FORM</a>
+                <ul>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">ABOUTUS</a></li>
+                </ul>
+            </li>
+            <li><a href="learn.html">LEARN</a>
+                <ul>
+                    <li><a href="#">GUIDES</a></li>
+                    <li><a href="#">RESOURCES</a></li>
+                    <li><a href="#">COURSES</a></li>
+                </ul>
+            </li>
+            <li><a href="prova.html">TEST</a>
+                <ul>
+                    <li><a href="#">CONTEST</a></li>
+                    <li><a href="#">CHALLENGES</a></li>
+                </ul></li>
+        </ul>
+        <h1><a href="index.html">JAVASCRIPT</a></h1>
+    </nav>
+    
+    <header>
+        <figure><img src="img/header.jpg" alt=""></figure>
+    </header>
+
+    <main>
+        <section>
+            <h1>Actividad 1:</h1>
+            <p>Crea una función para calcular la velocidad de un vehículo a partir de la distáncia de frenada</p>
+            <br>
+
+            <label for="distancia">Distancia de  la huella defrenada</label>
+            <input type="text" name="distancia" id="distancia" placeholder="Entry in meters(m)" required>
+            <br>
+
+            <label for="rozamiento">Coeficiente de rozamiento:</label>
+            <input type="number" name="rozamiento" id="rozamiento" placeholder=" 0,7"  required>
+            <br>
+
+            <label for="Pendiente">Pendiente (m):</label>
+            <input type="number" name="pendiente" id="pendiente" placeholder="Entry in percent %" required>
+            <br>
+            
+            <button onclick="calculo()">Calcula</button> <br>
+            <output id="output"></output>
+        </section>
+
+
+        <section>
+            <h1>Actividad 2</h1>
+            <p>Al presionar el botón, aparece un texto bajo "Resultado". Devuelve todos los números desde el 0 hasta la edad del usuario.</p>
+    
+            <h2>Formulario</h2>
+            <hr>
+    
+                    <label for="name">Nombre :</label>
+                    <input type="text" id="name">
+                    <br>
+                    <label for="age">Edad :</label>
+                    <input type="number" name="age" id="age">
+                    <br>
+                    <label for="status">Estado civil</label>
+                    <select name="status" id="status">
+                        <option value="1">Soltero</option>
+                        <option value="2">Casado</option>
+                        <option value="3">Otros</option>
+                    </select>
+                    <br>
+                    <input type="checkbox" name="job" id="job">
+                    <label for="job">En paro.</label>
+    
+                <button onclick="final()">Procesar</button>
+                <br>
+                <output id="final_output"></output>
+
+
+        </section>
+    
+        <section>
+            <h2>Cantidad de años vividos</h2>
+            <button onclick="edades()">Calcular</button>
+            <br>
+            <output id="edadesres"></output>
+        </section>
+    </main>
+
+
+
+    <footer><figure>
+        <a href="https://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="Facebook logo" title="Facebook logo"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="img/instagram.png" alt="Instagram logo" title="Instagram logo"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="img/linkedin.png" alt="LinkedIn logo" title="LinkedIn logo"></a>
+        <a href="https://twitter.com/?lang=es" target="_blank"><img src="img/twitter.png" alt="Twiiter logo" title="Twiiter logo"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="img/youtube.png" alt="Youtube Logo" title="Youtube Logo"></a>
+    </figure></footer>
+
+
+
+
+
+    <script>
+
+        function edades(){
+                let edad = parseInt(age.value)
+                let i = 0;
+                let edades = []
+                for(i>0; i<=edad; i++){
+                    edades.push(i)
+                }
+                edadesres.innerHTML = 'Has vivido estos años : '+ edades;
+            }
+
+        function calculo(){
+            let D = parseFloat(distancia.value);
+            let F = parseFloat(rozamiento.value);
+            let P = parseFloat(pendiente.value);
+            let v =  15.9 * Math.sqrt(D * (F + P / 100));
+
+            output.innerHTML = 'La velocidad del vehiculo es de: '+v.toFixed(2)+'Km/h';
+        }
+
+
+    </script>
+
+</body>
+</html>
